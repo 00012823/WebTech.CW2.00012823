@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	background-image: linear-gradient(120deg, #e2c35d, #d88771);
+	font-family: sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav {
+    display: flex;
+    align-self: flex-end;
+    width: 30%;
+		margin: 2rem;
+}
+
+nav ul {
+    padding-right: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    grid-column: 1 / -1;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 60vh;
+}
+
+main h1 {
+	text-align: center;
+	color: white;
+}
+
+main h1 span {
+		display: block;
+		text-transform: uppercase;
+		font-size: 5rem;
+		transition: all 0.2s linear;
+}
+
+main .btn-add {
+	background-color: wheat;
+	color: peru;
+	border-color: peru;
+	padding: 0.5rem 1.5rem;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s linear;
+	text-decoration: none;
+	font-size: 1rem;
+	margin-top: 3rem;
+}
+
+main .btn-add:hover {
+	background-color: white;
+}
+
+main h1:hover span {
+	color: rgb(0, 0, 0);
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	padding: 5rem;
+}
+
+footer p {
+	width: 70%;
+	text-align: center;
+	color: white;
+}
+
+main.not-completed {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 30%;
+}
+
+main.not-completed h1 {
+	width: 30%;
+}
+
+main.not-completed form {
+	width: 30%;
+	display: flex;
+	margin-top: 1rem;
+}
+
+form input {
+	width: 80%;
+	padding: 0.3rem 1rem;
+}
+
+form button {
+	width: 20%;
+	background-color: peru;
+	color: white;
+	transition: all 0.2s linear;
+	border: 1px solid peru;
+	cursor: pointer;
+}
+
+form button:hover {
+	background-color: white;
+	color: peru;
+}
+
+.todo-container {
+	width: 50%;
+	margin-top: 3rem;
+}
+
+.todo-list {
+	list-style: none;
+}
+
+.todo-item {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+
+.todo-item .todo {
+	width: 80%;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	transition: all 0.2s linear;
+}
+
+.todo.completed {
+	width: 100%;
+}
+
+.todo-item .todo:hover {
+	background-color: wheat;
+}
+
+.todo-item .complete-btn {
+	width: 20%;
+	background-color: green;
+	border: 1px solid green;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 0.5rem 1rem;
+	transition: all 0.2s linear;
+}
+
+.todo-item .complete-btn:hover {
+	background-color: white;
+	color: green;
+}
