@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [
     "to-do"
@@ -14,5 +14,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "pug": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/00012823/WebTech.CW2.00012823"
   }
 }
