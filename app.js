@@ -14,6 +14,6 @@ app.get('/', (req, res) => {
 
 app.use('/todos', todos)
 
-app.listen(PORT, () => {
-  console.log(`You app is running on port http://localhost:${ PORT }`)
-})
+const listener = app.listen(process.env.PORT, function () {
+    console.log("Your app is listening on port " + listener.address().port);
+});
