@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+  main
+      h1.page-title=todo.text
+      if todo.completed
+        h2.message.true This task has been completed!
+      else
+        h2.message.false Due to complete!

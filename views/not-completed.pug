@@ -3,15 +3,23 @@ extends layout.pug
 block content
   main.not-completed
     h1.page-title Not Completed Tasks
-    form
+    form(method="POST" action="/todos/not-completed")
       input.todo-input(type='text' name='todo')
-      button.todo-button(type='submit' method="POST" action="/not-completed") Add
+      button.todo-button(type="submit") Add
+  
+  if todos.length
+    section.todo-container
+      ul.todo-list
+        each todo in todos
+          li.todo-item 
+            a.todo(href=`/todos/${todo.id}`)=todo.text
+            a.complete-btn(href=`/todos/not-completed/${todo.id}/complete`) Complete
+  else
+    h1.no No available tasks!
 
-  section.todo-container
-    ul.todo-list
-      li.todo-item 
-        a.todo(href="/not-completed/id") Hey
-        a.complete-btn(href="/not-completed/id/complete") Complete
-      li.todo-item 
-        a.todo(href="/not-completed/id") Hello
-        a.complete-btn(href="/not-completed/id/complete") Complete
+  if error
+    aside.error Error! Try again!
+  if success
+    aside.success Added successfully!
+  if completed
+    aside.success Task has been completed successfully!

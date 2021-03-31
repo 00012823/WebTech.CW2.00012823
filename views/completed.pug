@@ -3,9 +3,11 @@ extends layout.pug
 block content
   main
       h1.page-title Completed Tasks
-  section.todo-container
-    ul.todo-list
-      li.todo-item 
-        a.todo.completed(href="/completed/id") Hey
-      li.todo-item 
-        a.todo.completed(href="/completed/id") Hello
+  if todos.length
+    section.todo-container
+      ul.todo-list
+        each todo in todos
+          li.todo-item 
+            a.todo.completed(href=`/todos/${todo.id}`)=todo.text
+  else
+    h1.no No task has been completed yet!

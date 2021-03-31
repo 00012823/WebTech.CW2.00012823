@@ -6,6 +6,7 @@ const todos = require("./routes/todos.js");
 app.set('view engine', 'pug')
 
 app.use(express.static("public"));
+app.use(express.urlencoded({extended: false}))
 
 app.get('/', (req, res) => {
   res.render('index')

@@ -181,3 +181,72 @@ form button:hover {
 	background-color: white;
 	color: green;
 }
+
+aside {
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	padding: 1rem 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.8rem;
+	animation-name: remove;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+	animation-delay: 2s;
+}
+
+aside.error {
+	background-color: rgb(255, 203, 203);
+	border: 1px solid red;
+	color: red;
+}
+
+aside.success {
+	background-color: rgb(190, 255, 190);
+	border: 1px solid green;
+	color: green;
+}
+
+.message {
+	padding: 1rem 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.8rem;
+	
+	margin-top: 1rem;
+}
+
+.message.true {
+	color: green;
+	background-color: rgb(190, 255, 190);
+	border: 1px solid green;
+}
+
+.message.false {
+	color: peru;
+	background-color: rgb(255, 230, 204);
+	border: 1px solid peru;
+}
+
+.no {
+	color: white;
+	font-size: 1.2rem;
+	font-style: italic;
+	padding: 1rem;
+	border: 5px solid white;
+}
+
+@keyframes remove {
+    0% {
+        opacity: 1;
+    }
+		50% {
+        opacity: 0.5;
+		}
+		100% {
+        opacity: 0;
+		}
+}
