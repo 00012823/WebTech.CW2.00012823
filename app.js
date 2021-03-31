@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = 1111
+const todos = require("./routes/todos.js");
 
 app.set('view engine', 'pug')
 
@@ -10,13 +11,7 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-app.get('/not-completed', (req, res) => {
-  res.render('not-completed')
-})
-
-app.get('/completed', (req, res) => {
-  res.render('completed')
-})
+app.use('/todos', todos)
 
 app.listen(PORT, () => {
   console.log(`You app is running on port http://localhost:${ PORT }`)

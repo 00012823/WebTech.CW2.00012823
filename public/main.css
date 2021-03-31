@@ -96,7 +96,7 @@ footer p {
 	color: white;
 }
 
-main.not-completed {
+main {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
