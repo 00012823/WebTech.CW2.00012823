@@ -23,6 +23,14 @@ node app.js
 ```
 
 
+## Structure of Application
+
+- App has a home page which welcomes the user with app name which is animated on hover
+- Also, app has two sections called 'Not Completed' and 'Completed' sections
+- 'Not Completed' section contains all not-completed tasks ans allows the user to add some.
+- 'Completed' section contains all tasks that have been marked as 'completed'
+
+
 ## Web Application Dependencies
 
 - express.js
@@ -32,3 +40,8 @@ node app.js
 ## Link to the Public Repo
 
 https://github.com/00012823/WebTech.CW2.00012823
+
+
+## Link to the Web Application
+
+https://have-to-do.glitch.me/
